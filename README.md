@@ -9,7 +9,7 @@ The API hides from the application all the complexity of performing CRUD operati
 ![Project Structure](project-structure.PNG?raw=true)
 
 ## Prerequisites :
-This example uses MySQL as the database, specifically **8.0.29 version**. Create a database `evolution` adn create a users table within `evolution` database.
+This example uses MySQL as the database, specifically **8.0.29 version**. Create a database `evolution` and create a users table within `evolution` database.
 
 ```sql
 CREATE TABLE users(id VARCHAR(36) NOT NULL PRIMARY KEY DEFAULT (uuid()),
@@ -26,4 +26,20 @@ db.url = jdbc:mysql://localhost:3306/evolution
 db.user = mahtab
 db.password = SomePassword1!
 
+```
+
+## UserDAO
+```java
+package net.mahtabalam.dao;
+
+import net.mahtabalam.model.User;
+import java.util.List;
+
+public interface UserDAO {
+    User findById(String id);
+    List<User> getAll();
+    void create(User user);
+    User update(User user);
+    void delete(String id);
+}
 ```
