@@ -45,6 +45,10 @@ public interface UserDAO {
 ```
 
 ## Main Class
+Below we create a User object using UserBuilder and save it to database, then we fetch all the user records from the db.
+Next we update the `country` field for first record from the fetched records.
+And finally we delete that first record from the database.
+
 ```java
 package net.mahtabalam;
 
