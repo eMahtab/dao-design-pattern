@@ -84,3 +84,12 @@ public class Application {
 }
 
 ```
+
+## Sample Output
+```java
+User Record : User{id='3aa429bd-efa0-11ec-9d82-00ff9244aefa', firstName='Mahtab', lastName='Alam', email='dummy@host.net', phone='null', country='null'}
+Updated User Record : User{id='3aa429bd-efa0-11ec-9d82-00ff9244aefa', firstName='Mahtab', lastName='Alam', email='dummy@host.net', phone='null', country='India'}
+```
+
+# References :
+https://www.baeldung.com/java-dao-pattern
