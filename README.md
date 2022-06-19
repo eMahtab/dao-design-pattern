@@ -9,4 +9,21 @@ The API hides from the application all the complexity of performing CRUD operati
 ![Project Structure](project-structure.PNG?raw=true)
 
 ## Prerequisites :
-This example uses MySQL as the database, specifically 8.0.29 version.
+This example uses MySQL as the database, specifically **8.0.29 version**. Create a database `evolution` adn create a users table within `evolution` database.
+
+```sql
+CREATE TABLE users(id VARCHAR(36) NOT NULL PRIMARY KEY DEFAULT (uuid()),
+                   first_name VARCHAR(50) DEFAULT NULL,
+                   last_name VARCHAR(50) DEFAULT NULL,
+                   email VARCHAR(100) DEFAULT NULL,
+                   phone_number VARCHAR(20) DEFAULT NULL,
+                   country VARCHAR(100) DEFAULT NULL);
+```
+
+## resources/config.properties
+```java
+db.url = jdbc:mysql://localhost:3306/evolution
+db.user = mahtab
+db.password = SomePassword1!
+
+```
