@@ -91,5 +91,23 @@ User Record : User{id='3aa429bd-efa0-11ec-9d82-00ff9244aefa', firstName='Mahtab'
 Updated User Record : User{id='3aa429bd-efa0-11ec-9d82-00ff9244aefa', firstName='Mahtab', lastName='Alam', email='dummy@host.net', phone='null', country='India'}
 ```
 
+## Using Java Generics :
+By using generics we can create are DAO's generically which can be implemented by the concrete DAO implementations.
+
+
+```java
+import java.util.List;
+
+public interface DAO<T> {
+    T findById(String id);
+    List<T> getAll();
+    void create(T t);
+    T update(T user);
+    void delete(String id);
+}
+```
+
+
+
 # References :
 https://www.baeldung.com/java-dao-pattern
