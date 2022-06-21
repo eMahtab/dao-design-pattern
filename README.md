@@ -94,6 +94,7 @@ Updated User Record : User{id='3aa429bd-efa0-11ec-9d82-00ff9244aefa', firstName=
 ## Using Java Generics :
 By using generics we can create are DAO's generically which can be implemented by the concrete DAO implementations.
 
+### DAO :
 
 ```java
 import java.util.List;
@@ -106,6 +107,7 @@ public interface DAO<T> {
     void delete(String id);
 }
 ```
+### UserDAO :
 
 ```java
 import net.mahtabalam.model.User;
