@@ -107,6 +107,43 @@ public interface DAO<T> {
 }
 ```
 
+```java
+import net.mahtabalam.model.User;
+import java.util.List;
+
+public class UserDAO implements DAO<User> {
+
+    @Override
+    public User findById(String id) {
+        // findById implementation
+        return null;
+    }
+
+    @Override
+    public List<User> getAll() {
+        // getAll implementation
+        return null;
+    }
+
+    @Override
+    public void create(User user) {
+        // create implementation
+    }
+
+    @Override
+    public User update(User user) {
+        // update implementation
+        return null;
+    }
+
+    @Override
+    public void delete(String id) {
+        // delete implementation
+    }
+}
+
+```
+
 
 
 # References :
